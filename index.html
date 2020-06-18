@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenAPI</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OpenWeatherMap Api</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="input">
-    <h1>Weather App</h1>
-    <input type="text" class="inputValue">
-    <input type="submit" value="Submit" class="button">
+
+    <div class="input">
+      <h1>OpenWeatherMap API</h1>
+      <input type="text" placeholder="Enter the city" class="input_text">
+      <input type="submit" value="Submit" class="submit">
+    </div>
   </div>
 
-  <div class="display">
-    <h1 class="name"></h1>
-    <p class="desc"></p>
-    <p class="temp"></p>
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
   </div>
-
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
