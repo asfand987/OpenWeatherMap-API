@@ -11,12 +11,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=d
 .then(response => response.json())
 .then(data => {
   var tempValue = data['main']['temp'];
+  tempValue = (tempValue - 273.15).toFixed(1);
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - "+descValue;
-  temp.innerHTML = "Temp - "+tempValue;
+  desc.innerHTML = "Description - "+descValue;
+  temp.innerHTML = "Temp - "+tempValue+ '&degC;';
   input.value ="";
 
 })
